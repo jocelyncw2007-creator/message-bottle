@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.bottle-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.bottle {
+    width: 150px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    animation: rotate 4s linear infinite;
+}
+
+.bottle:hover {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotateZ(-5deg); }
+    50% { transform: rotateZ(5deg); }
+    100% { transform: rotateZ(-5deg); }
+}
+
+.bottle-cork {
+    width: 30px;
+    height: 20px;
+    background: #d4af37;
+    border-radius: 5px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.bottle-body {
+    width: 120px;
+    height: 140px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, transparent 50%);
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px 30px 10px 10px;
+    margin: 0 auto;
+    margin-top: -5px;
+}
+
+.bottle-bottom {
+    width: 100px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: -10px;
+}
+
+.message-counter {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.open-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.open-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.open-btn:active {
+    transform: scale(0.98);
+}
+
+.message-display {
+    display: none;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.5s ease-out;
+}
+
+.message-display.active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-box {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border-radius: 15px;
+    padding: 30px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-text {
+    font-size: 1.3em;
+    color: #333;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.message-number {
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 10px;
+}
+
+.next-btn, .close-btn {
+    padding: 12px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.next-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.next-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.close-btn:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .bottle {
+        width: 120px;
+        height: 160px;
+    }
+
+    .message-display {
+        padding: 30px;
+    }
+}
