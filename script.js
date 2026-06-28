@@ -1,14 +1,14 @@
 // Message Bottle Messages
 const messages = [
-    "Hey! Thanks for being such an amazing friend! 🌟",
+    "Hai manusia favoritku! Thanks for always being there 🌟",
     "You make every day a little brighter just by being you 💬",
     "I'm so grateful to have you in my life 💕",
-    "Your smile is contagious and your laugh is the best 😊",
-    "Remember that time we... [insert your favorite memory here]? 🎉",
+    "Your smile is HMMM (apalagi klo salting) 😊",
+    "Remember that time we... kenalan dan janjian buat lupain nama? 🎉",
     "You're braver than you believe, stronger than you seem, and smarter than you think 💪",
     "Let's make more memories together! 🎨",
     "You're one of a kind and absolutely awesome! ✨",
-    "Thanks for being the best friend ever! 🏖️",
+    "Semoga sukses selalu dahh! 🏖️",
     "Can't wait to see you soon! 🍾"
 ];
 
